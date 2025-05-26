@@ -1,14 +1,14 @@
-window.nzxt = {
-  v1: {
-    onMonitoringDataUpdate: (data) => {
-      const cpu = data.cpus[0];
-      const gpu = data.gpus[0];
+function mockUpdate() {
+  const cpuTemp = Math.floor(Math.random() * 50) + 20;
+  const cpuLoad = Math.floor(Math.random() * 100);
+  const gpuTemp = Math.floor(Math.random() * 70) + 20;
+  const gpuLoad = Math.floor(Math.random() * 100);
 
-      document.getElementById('cpu-temp').textContent = `${cpu.temperature} °C`;
-      document.getElementById('cpu-usage').textContent = `${cpu.load} %`;
+  document.getElementById('cpu-temp').textContent = `${cpuTemp} °C`;
+  document.getElementById('cpu-usage').textContent = `${cpuLoad} %`;
 
-      document.getElementById('gpu-temp').textContent = `${gpu.temperature} °C`;
-      document.getElementById('gpu-usage').textContent = `${gpu.load} %`;
-    }
-  }
-};
+  document.getElementById('gpu-temp').textContent = `${gpuTemp} °C`;
+  document.getElementById('gpu-usage').textContent = `${gpuLoad} %`;
+}
+
+setInterval(mockUpdate, 2000);
