@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=640, height=640" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Kraken Dashboard</title>
+</head>
+<body>
+  <div class="dashboard">
+    <div class="stat">
+      <h2>CPU</h2>
+      <p id="cpu-temp">-- °C</p>
+      <p id="cpu-usage">-- %</p>
+    </div>
+    <div class="stat">
+      <h2>GPU</h2>
+      <p id="gpu-temp">-- °C</p>
+      <p id="gpu-usage">-- %</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
