@@ -1,0 +1,14 @@
+window.nzxt = {
+  v1: {
+    onMonitoringDataUpdate: (data) => {
+      const cpu = data.cpus[0];
+      const gpu = data.gpus[0];
+
+      document.getElementById('cpu-temp').textContent = `${cpu.temperature} °C`;
+      document.getElementById('cpu-usage').textContent = `${cpu.load} %`;
+
+      document.getElementById('gpu-temp').textContent = `${gpu.temperature} °C`;
+      document.getElementById('gpu-usage').textContent = `${gpu.load} %`;
+    }
+  }
+};
