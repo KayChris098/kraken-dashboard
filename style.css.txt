@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle, #1e1e1e, #121212);
+  font-family: 'Segoe UI', sans-serif;
+  color: #00ffcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 640px;
+  width: 640px;
+  overflow: hidden;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: pulse 10s infinite;
+}
+
+.stat {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.stat h2 {
+  margin-bottom: 10px;
+}
+
+@keyframes pulse {
+  0% { background-color: #1e1e1e; }
+  50% { background-color: #2e2e2e; }
+  100% { background-color: #1e1e1e; }
+}
